@@ -108,14 +108,14 @@ namespace Farmming
             GetCursorPos(out var pointInicio);
             Console.WriteLine($"x: {pointInicio.X}, y: {pointInicio.Y}");
 
-            Thread.Sleep(500);
+            Thread.Sleep(1000);
 
             Console.WriteLine("Clique no fim da area");
             while (!Convert.ToBoolean(GetKeyState(VirtualKeyStates.VK_LBUTTON) & KEY_PRESSED)) ;
             GetCursorPos(out var pointFim);
             Console.WriteLine($"x: {pointFim.X}, y: {pointFim.Y}");
 
-            Thread.Sleep(500);
+            Thread.Sleep(1000);
 
             Console.WriteLine("Clique na food");
             while (!Convert.ToBoolean(GetKeyState(VirtualKeyStates.VK_LBUTTON) & KEY_PRESSED)) ;
@@ -124,6 +124,8 @@ namespace Farmming
 
             Console.WriteLine("[ENTER] para começar");
             Console.ReadLine();
+
+            Thread.Sleep(5000);
 
             Task.Run(() =>
             {
