@@ -120,7 +120,7 @@ namespace Farmming
             Console.WriteLine("Clique na food");
             while (!Convert.ToBoolean(GetKeyState(VirtualKeyStates.VK_LBUTTON) & KEY_PRESSED)) ;
             GetCursorPos(out var posicaoComida);
-            Console.WriteLine($"x: {pointFim.X}, y: {pointFim.Y}");
+            Console.WriteLine($"x: {posicaoComida.X}, y: {posicaoComida.Y}");
 
             Console.WriteLine("[ENTER] para começar");
             Console.ReadLine();
